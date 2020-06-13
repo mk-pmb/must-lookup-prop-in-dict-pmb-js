@@ -1,0 +1,33 @@
+{ "name": "must-lookup-prop-in-dict-pmb",
+  "version": "0.0.1",
+  "description": "Look up the value of some config object's property in a dictionary object, throw if not found. (Double lookup, double throw.)",
+  "keywords": [
+    "dict",
+    "dictionary",
+    "lookup"
+  ],
+
+  "author": "M.K. (https://github.com/mk-pmb)",
+  "homepage": "https://github.com/mk-pmb/must-lookup-prop-in-dict-pmb-js/#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mk-pmb/must-lookup-prop-in-dict-pmb-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mk-pmb/must-lookup-prop-in-dict-pmb-js/issues"
+  },
+  "contributors": [],
+
+  "private": false, "license": "ISC",
+  "main": "index.js",
+  "scripts": { "test": "nodejs test/all.js" },
+  "directories": { "test": "test" },
+
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+
+
+  "npm vs. BOM = Unexpected token": "-*- coding: UTF-8 -*-"
+}
