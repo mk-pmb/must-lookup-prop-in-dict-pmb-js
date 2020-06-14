@@ -20,9 +20,18 @@ This module exports one function:
 
 First, look up the option value, i.e. `cfg[key]` if it exists,
 otherwise `dflt` will be used as the option value.
-The idea is that the option value is something that makes sense to a
-human reader, e.g. `presentation`.
-Then use `dict` to translate the option value to an
+
+* The idea is that the option value is something that makes sense to a
+  human reader, e.g. `presentation`.
+* The option value cannot be `undefined` (the false-y value).
+  This should not be a problem, as it would be stringified for `dict`
+  lookup anyway, so you can use the string `'undefined'`.
+* If `cfg` is a function, the option value will instead be determined
+  by `cfg(key, dflt)`. A result of `undefined` means failure.
+  * This feature works nicely with the `.ifHas` from
+    [objpop](https://github.com/mk-pmb/objpop-js).
+
+Once the option value is determined, translate it by `dict` to an
 actionable representation, and return that, e.g.
 `{ HandleLidSwitch: 'ignore', IdleAction: 'ignore' }`.
 
