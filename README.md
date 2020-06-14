@@ -16,24 +16,15 @@ API
 
 This module exports one function:
 
-### lookup(dict, descr, cfg, key, dflt)
+### lookup(descr, cfg, dict, key, dflt)
 
 First, look up the option value, i.e. `cfg[key]` if it exists,
 otherwise `dflt` will be used as the option value.
 The idea is that the option value is something that makes sense to a
-human reader, e.g. `Presentation`.
+human reader, e.g. `presentation`.
 Then use `dict` to translate the option value to an
 actionable representation, and return that, e.g.
-
-```javascript
-{ HandlePowerKey: 'ignore',
-  HandleSuspendKey: 'ignore',
-  HandleHibernateKey: 'ignore',
-  HandleLidSwitch: 'ignore',
-  IdleAction: 'ignore',
-  IdleActionSec: 'never',
-}
-```
+`{ HandleLidSwitch: 'ignore', IdleAction: 'ignore' }`.
 
 If either lookup fails, throw an error.
 The error message will use `String(descr || dict)` as the (hopefully)
