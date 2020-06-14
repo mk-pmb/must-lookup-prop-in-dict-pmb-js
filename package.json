@@ -1,5 +1,5 @@
 { "name": "must-lookup-prop-in-dict-pmb",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Look up the value of some config object's property in a dictionary object, throw if not found. (Double lookup, double throw.)",
   "keywords": [
     "dict",
